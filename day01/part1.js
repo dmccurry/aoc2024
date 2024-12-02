@@ -10,6 +10,7 @@ for (let i = 0; i < lines.length; i++) {
     list1.push(parseInt(parts[0]));
     list2.push(parseInt(parts[1]));   
 }
+const start = performance.now();
 list1.sort();
 list2.sort();
 
@@ -18,3 +19,4 @@ for (let i = 0; i < list1.length; i++) {
     sum += Math.abs(list1[i] - list2[i]);
 }
 console.log(`Solution is ${sum}`);
+console.log(`Solution took ${performance.now() - start}ms`);

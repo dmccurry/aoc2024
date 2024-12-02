@@ -31,6 +31,7 @@ for (let i=0; i<lines.length; i++) {
     reports.push(lines[i].split(' ').map(i => parseInt(i)));
 }
 let numSafe = 0;
+const start = performance.now();
 for (let i=0; i<reports.length; i++) {
 
     for (let j=0; j<reports[i].length; j++) {
@@ -42,4 +43,5 @@ for (let i=0; i<reports.length; i++) {
 }
 
 console.log(`Solution is ${numSafe}`);
+console.log(`Solution took ${performance.now() - start}ms`);
 

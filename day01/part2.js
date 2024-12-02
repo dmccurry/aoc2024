@@ -15,6 +15,7 @@ for (let i = 0; i < lines.length; i++) {
         list2[p1] = 1;
     }
 }
+const start = performance.now();
 list1.sort();
 let sum = 0;
 for (let i = 0; i < list1.length; i++) {
@@ -22,3 +23,4 @@ for (let i = 0; i < list1.length; i++) {
     sum += list1[i] * l2;
 }
 console.log(`Solution is ${sum}`);
+console.log(`Solution took ${performance.now() - start}ms`);

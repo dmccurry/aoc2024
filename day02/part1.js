@@ -22,6 +22,7 @@ const isSafe = (report) => {
 for (let i=0; i<lines.length; i++) {
     reports.push(lines[i].split(' ').map(i => parseInt(i)));
 }
+const start = performance.now();
 let numSafe = 0;
 for (let i=0; i<reports.length; i++) {
     if (isSafe(reports[i])) {
@@ -30,4 +31,5 @@ for (let i=0; i<reports.length; i++) {
 }
 
 console.log(`Solution is ${numSafe}`);
+console.log(`Solution took ${performance.now() - start}ms`);
 
