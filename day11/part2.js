@@ -26,11 +26,7 @@ const doCount = (stone, step) => {
     return newStone;
 
 }
-
-
-
 const input = fs.readFileSync('./input', 'utf-8');
-
 const start = performance.now();
 let nums = input.split(' ').map(Number);
 let count = 0;
